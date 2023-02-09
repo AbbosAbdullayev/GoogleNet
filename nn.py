@@ -91,13 +91,10 @@ class GoogleNet(nn.Module):
         m=self.dropout(m)
         m=self.fc(m)
         return m
+'''    
 if __name__=='__main__':
-    #batch=4
-#x=torch.randn(batch,3,224,224)
-    model=GoogleNet(n_class=2)
+    model=GoogleNet(n_class=4)
     summary(model,input_size=(3,224,224))
     dumpy_input=torch.randn(1,3,224,224)
     graph=make_dot(model(dumpy_input),params=dict(model.named_parameters()))
-  #  graph.render('GoogleNet')
-#model.summary()
-#print(model(x)[2].shape)
+    graph.render('GoogleNet')
