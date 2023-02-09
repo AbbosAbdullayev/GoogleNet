@@ -98,3 +98,4 @@ if __name__=='__main__':
     dumpy_input=torch.randn(1,3,224,224)
     graph=make_dot(model(dumpy_input),params=dict(model.named_parameters()))
     graph.render('GoogleNet')
+'''
